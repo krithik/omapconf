@@ -1169,9 +1169,9 @@ int main(int argc, char *argv[])
 	/* Platform-specific functions */
 main_platform_specific:
 	if (cpu_found) {
-		omapconf_revision_show(stdout);
-		chips_info_show(stdout, 0);
-		release_info_show(stdout);
+//		omapconf_revision_show(stdout);
+//		chips_info_show(stdout, 0);
+//		release_info_show(stdout);
 		if (cpu_is_omap44xx()) {
 			ret = main44xx(argc, argv);
 			goto main_exit;
