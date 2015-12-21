@@ -46,7 +46,7 @@
 
 /* +1 is for the END element */
 #define ISS_HL_REG_TABLE_SIZE		(24 + 1)
-#define ISS_CSI2_REG_TABLE_SIZE		(73 + 1)
+#define ISS_CSI2_REG_TABLE_SIZE		(74 + 1)
 #define ISS_CSIPHY_REG_TABLE_SIZE	(3 + 1)
 #define ISS_CCP2_REG_TABLE_SIZE		(64 + 1)
 
@@ -118,6 +118,8 @@ void camera44xx_init_regtable(void)
 		iss_csi2_reg_table[k][i++].addr = CSI2_SYSCONFIG + (k * 0x400);
 		strcpy(iss_csi2_reg_table[k][i].name, "CSI2_SYSSTATUS");
 		iss_csi2_reg_table[k][i++].addr = CSI2_SYSSTATUS + (k * 0x400);
+		strcpy(iss_csi2_reg_table[k][i].name, "CSI2_IRQSTATUS");
+		iss_csi2_reg_table[k][i++].addr = CSI2_IRQSTATUS + (k * 0x400);
 		strcpy(iss_csi2_reg_table[k][i].name, "CSI2_IRQENABLE");
 		iss_csi2_reg_table[k][i++].addr = CSI2_IRQENABLE + (k * 0x400);
 		strcpy(iss_csi2_reg_table[k][i].name, "CSI2_CTRL");
